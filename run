@@ -1,0 +1,17 @@
+#/bin/bash
+
+mkdir -p $PWD/puppet/manifests
+
+cat  > $PWD/puppet/manifests/site.pp << !!!
+  import 'hello.pp'
+!!!
+
+cat  > $PWD/puppet/manifests/hello.pp << !!!
+  node 'vagrant-centos64.vagrantup.com' {
+    file { '/tmp/helloworld':
+      content => "Hello World\n",
+    }
+  }
+!!!
+
+  
