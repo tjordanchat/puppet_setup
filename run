@@ -14,4 +14,14 @@ cat  > $PWD/puppet/manifests/hello.pp << !!!
   }
 !!!
 
+sudo apt update
+
+sudo apt install default-jre
+
+sudo apt -y install dpkg
+
+sudo dpkg -i apt.deb
+
+sudo apt-get -f -y install  openjdk-8-jre-headless
+
   
