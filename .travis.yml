@@ -1,7 +1,7 @@
 sudo: true
 language: shell
 script:
-- curl https://raw.githubusercontent.com/tjordanchat/jenkins_setup/master/installer2.sh
+- curl https://raw.githubusercontent.com/tjordanchat/puppet_setup/master/run.sh
   | bash
 - echo Done
 
