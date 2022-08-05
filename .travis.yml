@@ -2,6 +2,6 @@ sudo: true
 language: shell
 script:
 - curl https://raw.githubusercontent.com/tjordanchat/puppet_setup/master/run.sh
-  | sh
+  | /bin/sh
 - echo Done
 
