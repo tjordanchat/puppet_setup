@@ -4,6 +4,6 @@ script: |
   set -x
   sudo apt update && sudo apt upgrade
   sudo apt install curl
-  curl https://raw.githubusercontent.com/tjordanchat/puppet_setup/master/run.sh | /bin/sh
+  /bin/sh ./run.sh
   echo Done
 
