@@ -22,3 +22,9 @@ sudo apt-get -f -y install  openjdk-8-jre-headless
 
 Install_Puppet
 
+puppet apply manifests/site.pp
+
+ls -l /tmp/HelloWorld
+
+cat /tmp/HelloWorld
+
