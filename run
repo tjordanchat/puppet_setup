@@ -1,6 +1,5 @@
 #!/bin/sh
 set -x
-env
 
 Install_Puppet () {
    echo INSTALL PUPPET
@@ -9,6 +8,10 @@ Install_Puppet () {
    sudo apt-get -f -y install  puppetmaster
    sudo apt-get -f -y install  puppet
 }
+
+sudo apt update && sudo apt upgrade
+
+sudo apt install curl
 
 sudo apt update
 
