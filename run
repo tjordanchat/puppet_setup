@@ -3,7 +3,7 @@ set -x
 env
 
 Install_Puppet () {
-   ----- INSTALL PUPPET
+   echo INSTALL PUPPET
    sudo wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
    sudo dpkg --force-all -i puppetlabs-release-trusty.deb
    sudo apt-get -f -y install  puppetmaster
