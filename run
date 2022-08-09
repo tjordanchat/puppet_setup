@@ -1,6 +1,12 @@
 #!/bin/sh
 set -x
 
+----- () {
+    printf "\e[32m"
+    toilet -f term -F border  $@ 
+    printf "\e[0m"
+}
+
 Install_Puppet () {
    echo INSTALL PUPPET
    sudo wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
@@ -9,18 +15,17 @@ Install_Puppet () {
    sudo apt-get -f -y install  puppet
 }
 
+sudo apt-get -f install
+sudo apt-get update -y 2>/dev/null
+sudo apt-get install -y toilet toilet-fonts
+sudo apt-get -f install figlet -y
+
 sudo apt update && sudo apt upgrade
-
 sudo apt install curl
-
 sudo apt update
-
 sudo apt install default-jre
-
 sudo apt -y install dpkg
-
 sudo dpkg -i apt.deb
-
 sudo apt-get -f -y install  openjdk-8-jre-headless
 
 Install_Puppet
