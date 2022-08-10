@@ -2,5 +2,5 @@ sudo: true
 language: shell
 script: |
   /bin/sh ./run
-  echo "_____Done_____"
+  echo Done
 
