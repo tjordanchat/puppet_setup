@@ -1,6 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 set -x
-env
+
+E () {
+    printf "\e[32m"
+    toilet -f term -F border  $@ 
+    printf "\e[0m"
+}
 
 Install_Puppet () {
    echo INSTALL PUPPET
@@ -10,6 +15,7 @@ Install_Puppet () {
    sudo apt-get -f -y install  puppet
 }
 
+<<<<<<< HEAD
 Install_Puppet_PreReqs () {
   sudo apt update
   sudo apt install default-jre
@@ -19,6 +25,20 @@ Install_Puppet_PreReqs () {
 }
 
 Install_Puppet_PreReqs
+=======
+sudo apt-get -f install
+sudo apt-get update -y 2>/dev/null
+sudo apt-get install -y toilet toilet-fonts
+sudo apt-get -f install figlet -y
+
+sudo apt update && sudo apt upgrade
+sudo apt install curl
+sudo apt update
+sudo apt install default-jre
+sudo apt -y install dpkg
+sudo dpkg -i apt.deb
+sudo apt-get -f -y install  openjdk-8-jre-headless
+>>>>>>> 98263c0f9f29b01be46202db7feaafae33e24bc7
 
 Install_Puppet
 
