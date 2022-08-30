@@ -10,15 +10,15 @@ Install_Puppet () {
    sudo apt-get -f -y install  puppet
 }
 
-sudo apt update
+Install_Puppet_PreReqs () {
+  sudo apt update
+  sudo apt install default-jre
+  sudo apt -y install dpkg
+  sudo dpkg -i apt.deb
+  sudo apt-get -f -y install  openjdk-8-jre-headless
+}
 
-sudo apt install default-jre
-
-sudo apt -y install dpkg
-
-sudo dpkg -i apt.deb
-
-sudo apt-get -f -y install  openjdk-8-jre-headless
+Install_Puppet_PreReqs
 
 Install_Puppet
 
