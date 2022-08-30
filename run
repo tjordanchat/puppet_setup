@@ -15,7 +15,6 @@ Install_Puppet () {
    sudo apt-get -f -y install  puppet
 }
 
-<<<<<<< HEAD
 Install_Puppet_PreReqs () {
   sudo apt update
   sudo apt install default-jre
@@ -24,21 +23,16 @@ Install_Puppet_PreReqs () {
   sudo apt-get -f -y install  openjdk-8-jre-headless
 }
 
-Install_Puppet_PreReqs
-=======
-sudo apt-get -f install
-sudo apt-get update -y 2>/dev/null
-sudo apt-get install -y toilet toilet-fonts
-sudo apt-get -f install figlet -y
+Install_Messaging () {
+  sudo apt-get -f install
+  sudo apt-get update -y 2>/dev/null
+  sudo apt-get install -y toilet toilet-fonts
+  sudo apt-get -f install figlet -y
+}
 
-sudo apt update && sudo apt upgrade
-sudo apt install curl
-sudo apt update
-sudo apt install default-jre
-sudo apt -y install dpkg
-sudo dpkg -i apt.deb
-sudo apt-get -f -y install  openjdk-8-jre-headless
->>>>>>> 98263c0f9f29b01be46202db7feaafae33e24bc7
+Install_Messaging
+
+Install_Puppet_PreReqs
 
 Install_Puppet
 
